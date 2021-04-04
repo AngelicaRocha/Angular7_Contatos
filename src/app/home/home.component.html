@@ -1,0 +1,25 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-lg-6">
+      <app-contato-form [contato]="contato" (saveContato)="saveContato($event)"></app-contato-form>
+      <!-- [prop] = "prop" >> Relaciona a propriedade que foi marcada como @input no componente filho com a propriedade criada na classe do componente pai -->
+      <!-- (evento) = "metodo()" >> Relaciona o método do pai ["saveContato($event)""] com o evento do filho [(saveContato)] -->
+
+      <!--
+
+        [] >> relaciona propriedades
+        () >> relaciona eventos
+        [()] >> "two-way data binding" serve para perceber eventos e atualizações de valores simultaneamente entre componentes pai e filho (porém o evento tem que ter "change" no final do nome)
+
+      -->
+    </div>
+
+    <div class="col-lg-6">
+      <app-contato-list [contatos]="contatos"></app-contato-list>
+    </div>
+
+  </div>
+
+</div>
